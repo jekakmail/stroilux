@@ -1,5 +1,197 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    section#home.padbot0
+        #headerwrap
+            .container
+                .row
+                    .col-lg-8.col-lg-offset-2.mt
+                        h1(style='color:#000000')
+                            b StroiLux.by
+                        h2(style='color:#000000') Все виды отделочных работ в Минске
+                        P
+                            b
+                                a(href='tel:+375296362733')
+                                    span(style='font-size:21px;color:#000000;')
+                                        i.fa.fa-phone(aria-hidden='true')
+                                        | &nbsp;+375 29 6362733&nbsp;
+                                        span(style='font-size:22px;color:#fbb203;') Velcom
+                        P
+                            b
+                                a(href='tel:+375255114505')
+                                    span(style='font-size:21px;color:#000000;')
+                                        i.fa.fa-phone(aria-hidden='true')
+                                        | &nbsp;+375 25 5114505&nbsp;
+                                        span(style='font-size:22px;color:#e00707;') Life:)
+                        P
+                            b
+                                a(href='tel:+375257857327')
+                                    span(style='font-size:21px;color:#000000;')
+                                        i.fa.fa-phone(aria-hidden='true')
+                                        | &nbsp;+375 25 7857327&nbsp;
+                                        span(style='font-size:22px;color:#e00707;') Life:)
+                        P
+                            b
+                                a(href='tel:+31647658746')
+                                    span(style='font-size:21px;color:#000000;')
+                                        i.fa.fa-phone(aria-hidden='true')
+                                        | &nbsp;+31 64 7658746&nbsp;
+                                        span(style='font-size:22px;color:#30006e;') Viber
+    section#about
+        .services_block.padbot40(data-appear-top-offset='0', data-animated='fadeInUp')
+            .container
+                .row
+                    .col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ss-12.margbot30
+                        a.services_item(href='javascript:void(0);')
+                            p
+                                b Официальный договор, гарантия
+                            span Мы работаем только официально и заключаем договор. Даем гарантию на все выполненные нами работы до одного года.
+                    .col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ss-12.margbot30
+                        a.services_item(href='javascript:void(0);')
+                            p
+                                b Имеем большой опыт
+                            span Наши сотрудники профессионалы своего дела и имеют большой опыт работ.
+                    .col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ss-12.margbot30
+                        a.services_item(href='javascript:void(0);')
+                            p
+                                b Беспыльные работы
+                            span Наши инструменты и оборудование позволяют проводить все работы без пыли, что сохранит все в чистоте.
+                    .col-lg-3.col-md-3.col-sm-6.col-xs-6.col-ss-12.margbot30
+                        a.services_item(href='javascript:void(0);')
+                            p
+                                b Конкурентные цены
+                            span Наши цены ниже-среднего по рынку, а качество на высоте. Не верите? Проверьте сами!
+        .container
+            .row
+                h2(align='center') Мы используем только профессиональное оборудование и инструменты
+            .row.top_space
+                .col-xs-0.col-sm-0.col-md-1.col-lg-1
+                .col-xs-12.col-sm-12.col-md-2.col-lg-2
+                    div(align='center')
+                        img(src='/images/wo/1.png')
+                .col-xs-12.col-sm-12.col-md-2.col-lg-2
+                    div(align='center')
+                        img(src='/images/wo/2.png')
+                .col-xs-12.col-sm-12.col-md-2.col-lg-2
+                    div(align='center')
+                        img(src='/images/wo/4.jpg')
+                .col-xs-12.col-sm-12.col-md-2.col-lg-2
+                    div(align='center')
+                        img(src='/images/wo/5.png')
+                .col-xs-12.col-sm-12.col-md-2.col-lg-2
+                    div(align='center')
+                        img(src='/images/wo/3.jpg')
+                .col-xs-0.col-sm-0.col-md-1.col-lg-1
+        br
+        br
+        section#projects.padbot20
+            .container
+                h2
+                    b Наши
+                    | &nbsp;работы
+            .projects-wrapper(data-appear-top-offset='-200', data-animated='fadeInUp')
+                .owl-demo.owl-carousel.projects_slider
+                    .item
+                        .work_item
+                            .work_img
+                                img(src='/images/works/1.jpg')
+                                a.zoom(href='/images/works/1.jpg', rel='prettyPhoto[portfolio1]')
+                    .item
+                        .work_item
+                            .work_img
+                                img(src='/images/works/2.jpg')
+                                a.zoom(href='/images/works/2.jpg', rel='prettyPhoto[portfolio1]')
+                    .item
+                        .work_item
+                            .work_img
+                                img(src='/images/works/3.jpg')
+                                a.zoom(href='/images/works/3.jpg', rel='prettyPhoto[portfolio1]')
+                    .item
+                        .work_item
+                            .work_img
+                                img(src='/images/works/4.jpg')
+                                a.zoom(href='/images/works/4.jpg', rel='prettyPhoto[portfolio1]')
+                    .item
+                        .work_item
+                            .work_img
+                                img(src='/images/works/5.jpg')
+                                a.zoom(href='/images/works/5.jpg', rel='prettyPhoto[portfolio1]')
+                    .item
+                        .work_item
+                            .work_img
+                                img(src='/images/works/6.jpg')
+                                a.zoom(href='/images/works/6.jpg', rel='prettyPhoto[portfolio1]')
+                    .item
+                        .work_item
+                            .work_img
+                                img(src='/images/works/7.jpg')
+                                a.zoom(href='/images/works/7.jpg', rel='prettyPhoto[portfolio1]')
+                    .item
+                        .work_item
+                            .work_img
+                                img(src='/images/works/8.jpg')
+                                a.zoom(href='/images/works/8.jpg', rel='prettyPhoto[portfolio1]')
+                    .item
+                        .work_item
+                            .work_img
+                                img(src='/images/works/9.jpg')
+                                a.zoom(href='/images/works/9.jpg', rel='prettyPhoto[portfolio1]')
+                    .item
+                        .work_item
+                            .work_img
+                                img(src='/images/works/10.jpg')
+                                a.zoom(href='/images/works/10.jpg', rel='prettyPhoto[portfolio1]')
+    section#onas
+        .purpose_block
+            .container
+                .row
+                    .col-lg-7.col-md-7.col-sm-7(data-appear-top-offset="-200", data-animated="fadeInLeft")
+                        h2
+                            b Работаем только
+                            | &nbsp;официально
+                        p.
+                            Наша команда имеет большой опыт работ на рынке строительных услуг. За время
+                            становления мы сумели мобилизовать необходимые ресурсы для выполнения
+                            строительно-монтажных работ, а также смогла завоевать доверие Заказчиков.
+                            Многолетний опыт работы позволяет нам на высоком уровне выполнять весь спектр
+                            услуг.
+                            Постоянное изучение динамики рынка, а также, пожеланий Заказчиков позволяет нам
+                            гарантировать высокое качество строительно-монтажных работ.
+                        a.btn.btn-active(rel='nofollow', href='https://s.onliner.by/profiles/39974')
+                            span(data-hover='Посмотреть') Отзывы на Onliner.by
+                    .col-lg-5.col-md-5.col-sm-5.ipad_img_in(data-appear-top-offset='-200', data-animated='fadeInRight')
+                        img.ipad_img1(src='/images/img1.jpg')
+    br
+    section#news
+        .container
+            h2
+                b Отзывы
+                | &nbsp;наших клиентов
+            .testimonials(data-appear-top-offset='-200', data-animated='fadeInUp')
+                .owl-demo.owl-carousel.testim_slider
+                    .item
+                        .testim_content
+                            | “Отличные мастера. Работают быстро, качественно и
+                            | ответственно. Очень радует беспыльные работы, также каждый день за собой
+                            | убирают. Грязи после работ не было вообще! Приятно было общаться и работать.
+                            | Спасибо!”
+                        .testim_author
+                            | —Евгений,
+                            b  на заказ: комплексная отделка комнаты
+                    .item
+                        .testim_content
+                            | “Хочу выразить свою благодарность Роману и
+                            | Александру за
+                            | проделанную работу. Помог определится с раскладкой плитки и выбором
+                            | материалов.
+                            | Чистота и порядок в конце работы приятно удивила.”
+                        .testim_author
+                            | —Татьяна,
+                            b  на заказ: укладка плитки
+                    .item
+                        .testim_content
+                            | “Спасибо большое за проделанную работу! Все очень
+                            | понравилось. Профессионалы своего дела! Сверлили и шлифовали без пыли.”
+                        .testim_author
+                            | — Светлана,
+                            b  на заказ: фигурный потолок с гипсокартона и поклейка обоев

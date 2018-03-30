@@ -443,8 +443,7 @@ html[xmlns] .slides {display: block;}
 	width:30px;
 	height:30px;
 	margin:-15px 0 0 -15px;
-	background-image:url(../images/video.png);
-	background-repeat:no-repeat;
+	background: url(../images/video.png) no-repeat;
 	background-size:100% auto;
 	-webkit-background-size:100% auto;
 }

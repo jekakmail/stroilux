@@ -1,5 +1,39 @@
 extends layout
 
 block content
-    h1= title
-    p Page #{title}
+    section.breadcrumbs_block.clearfix.parallax
+        .container.center
+            h2(style='color:#000000')
+                b Цены
+            p(style='color:#000000') Расценки на отделочные работы 2017 год
+    section#blog
+        .container
+            .row
+                .blog_block.col-lg-9.col-md-9.padbot50
+                    .single_blog_post.clearfix(data-animated='fadeInUp')
+                        .single_blog_post_descr
+                        .single_blog_post_content
+                            br
+                            table.table
+                                h2 Демонтаж
+                                tr
+                                    td
+                                        b Стены
+                                    td
+                                        b Бел. Руб
+                                    td
+                                        b за м2 / м.п.
+                                tr
+                                    td Демонтаж обшивки стен из фанеры, ОСБ
+                                    td 10
+                                    td шт.
+                                tr
+                                    td Демонтаж перегородок из ГКЛ
+                                    td 6
+                                    td за м2
+                    hr
+                    .sidepanel.widget_text
+                        h3
+                            a(href='/Prays_rabochiy.xlsx')
+                                b Скачать
+                            |&nbsp;прайс-лист на услуги в EXCEL таблице

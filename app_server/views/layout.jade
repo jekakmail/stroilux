@@ -42,9 +42,8 @@ html
                     .row.animated.fadeInUp(data-appear-top-offset='-200', data-animated='fadeInUp')
                         .col-lg-4.col-md-4.col-sm-6.padbot30.foot_about_block
                             h4
-                                b О нас
-                            p Большой опыт. Договор. Гарантия. Выезд мастера на обмер и составление сметы бесплатно.
-                            p Все пыльные работы выполняются только с промышленным пылесосом, что гарантирует чистоту в помещении. Использование профессионального инструмента. Помощь в выборе материалов, консультация.
+                                b= aboutBlock.header
+                            p= aboutBlock.body
                         .respond_clear
                         .col-lg-4.col-md-4.padbot30
                             h4

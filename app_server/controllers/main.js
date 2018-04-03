@@ -3,10 +3,12 @@ var renderHomepage = function (req, res) {
         title: 'Отделочные работы в Минске',
         siteName: 'StroiLux.by',
         landHeader: 'Все виды отделочных работ в Минске',
-        taxInfo:{
+        taxInfo: {
             name: 'Климович Р.А.',
             state: 'ИП',
-            uniqueTaxNumber: '192986798'
+            uniqueTaxNumber: '192986798',
+            scanDocument: '/images/img1.jpg',
+            linkToProfile: 'https://s.onliner.by/profiles/39974'
         },
         contacts: [{
             name: 'Александр',
@@ -27,7 +29,7 @@ var renderHomepage = function (req, res) {
                 op: 'Viber'
             }]
         }],
-        advantagesBlock: [{
+        advantages: [{
             title: 'Официальный договор, гарантия',
             body: 'Мы работаем только официально и заключаем договор. Даем гарантию на все выполненные нами работы до одного года.'
         }, {
@@ -40,21 +42,61 @@ var renderHomepage = function (req, res) {
             title: 'Конкурентные цены',
             body: 'Наши цены ниже-среднего по рынку, а качество на высоте. Не верите? Проверьте сами!'
         }],
-        toolsBlock: {
-            header: 'Мы используем только профессиональное оборудование и инструменты'
-            //TODO links to images
+        tools: {
+            header: 'Мы используем только профессиональное оборудование и инструменты',
+            images: [{
+                path: '/images/wo/1.png'
+            },{
+                path: '/images/wo/2.png'
+            },{
+                path: '/images/wo/4.jpg'
+            }, {
+                path: '/images/wo/5.png'
+            },{
+                path: '/images/wo/3.jpg'
+            }]
         },
-        worksBlock: {
-            worksHeader: 'Наши работы'
-            //TODO links to images
+        ourWorks: {
+            header: 'Наши работы',
+            images: [{
+                original: '/images/works/1.jpg',
+                compressed: '/images/works/1.jpg'
+            },{
+                original: '/images/works/2.jpg',
+                compressed: '/images/works/2.jpg'
+            },{
+                original: '/images/works/3.jpg',
+                compressed: '/images/works/3.jpg'
+            },{
+                original: '/images/works/4.jpg',
+                compressed: '/images/works/4.jpg'
+            },{
+                original: '/images/works/5.jpg',
+                compressed: '/images/works/5.jpg'
+            },{
+                original: '/images/works/6.jpg',
+                compressed: '/images/works/6.jpg'
+            },{
+                original: '/images/works/7.jpg',
+                compressed: '/images/works/7.jpg'
+            },{
+                original: '/images/works/8.jpg',
+                compressed: '/images/works/8.jpg'
+            },{
+                original: '/images/works/9.jpg',
+                compressed: '/images/works/9.jpg'
+            },{
+                original: '/images/works/10.jpg',
+                compressed: '/images/works/10.jpg'
+            }]
         },
-        descriptionBlock: {
+        description: {
             header: 'Работаем только официально',
-            description: 'Наша команда имеет большой опыт работ на рынке строительных услуг. За время становления мы сумели мобилизовать необходимые ресурсы для выполнения строительно-монтажных работ, а также смогла завоевать доверие Заказчиков. Многолетний опыт работы позволяет нам на высоком уровне выполнять весь спектр услуг. Постоянное изучение динамики рынка, а также, пожеланий Заказчиков позволяет нам гарантировать высокое качество строительно-монтажных работ.'
+            body: 'Наша команда имеет большой опыт работ на рынке строительных услуг. За время становления мы сумели мобилизовать необходимые ресурсы для выполнения строительно-монтажных работ, а также смогла завоевать доверие Заказчиков. Многолетний опыт работы позволяет нам на высоком уровне выполнять весь спектр услуг. Постоянное изучение динамики рынка, а также, пожеланий Заказчиков позволяет нам гарантировать высокое качество строительно-монтажных работ.'
         },
-        reviewsBlock: {
+        reviews: {
             header: 'Отзывы наших клиентов',
-            reviews: [{
+            items: [{
                 name: 'Евгений',
                 work: 'комплексная отделка комнаты',
                 body: 'Отличные мастера. Работают быстро, качественно и ответственно. Очень радует беспыльные работы, также каждый день за собой убирают. Грязи после работ не было вообще! Приятно было общаться и работать. Спасибо!'
@@ -68,7 +110,7 @@ var renderHomepage = function (req, res) {
                 body: 'Спасибо большое за проделанную работу! Все очень понравилось. Профессионалы своего дела! Сверлили и шлифовали без пыли.'
             }]
         },
-        aboutBlock: {
+        about: {
             header: 'О нас',
             body: 'Большой опыт. Договор. Гарантия. Выезд мастера на обмер и составление сметы бесплатно. Все пыльные работы выполняются только с промышленным пылесосом, что гарантирует чистоту в помещении. Использование профессионального инструмента. Помощь в выборе материалов, консультация.'
         }

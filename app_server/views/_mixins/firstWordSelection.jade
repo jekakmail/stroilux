@@ -1,0 +1,4 @@
+mixin firstWordSelection(str)
+    -var words = str.toString().split(" ")
+    b= words.slice(0, 1)
+    | &nbsp;#{words.slice(1).join(' ')}

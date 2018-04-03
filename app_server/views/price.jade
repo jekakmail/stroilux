@@ -4,8 +4,8 @@ block content
     section.breadcrumbs_block.clearfix.parallax
         .container.center
             h2(style='color:#000000')
-                b Цены
-            p(style='color:#000000') Расценки на отделочные работы 2017 год
+                b= header
+            p(style='color:#000000')= landHeader
     section#blog
         .container
             .row
@@ -17,11 +17,11 @@ block content
                             table.table
                                 h2 Демонтаж
                                 tr
-                                    td
+                                    th
                                         b Стены
-                                    td
+                                    th
                                         b Бел. Руб
-                                    td
+                                    th
                                         b за м2 / м.п.
                                 tr
                                     td Демонтаж обшивки стен из фанеры, ОСБ

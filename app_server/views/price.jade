@@ -14,26 +14,38 @@ block content
                         .single_blog_post_descr
                         .single_blog_post_content
                             br
-                            table.table
-                                h2 Демонтаж
-                                tr
-                                    th
-                                        b Стены
-                                    th
-                                        b Бел. Руб
-                                    th
-                                        b за м2 / м.п.
-                                tr
-                                    td Демонтаж обшивки стен из фанеры, ОСБ
-                                    td 10
-                                    td шт.
-                                tr
-                                    td Демонтаж перегородок из ГКЛ
-                                    td 6
-                                    td за м2
+                            each block in priceData
+                                table.table
+                                    h2= block.blockName
+                                    tr
+                                        th/
+                                        th
+                                            b Бел. Руб
+                                        th
+                                            b за м
+                                            sup 2
+                                            |/
+                                            br
+                                            |м.п.
+                                        each part in block.parts
+                                            tr
+                                                td
+                                                    b= part.partName
+                                                td/
+                                                td/
+                                            each line in part.lines
+                                                tr
+                                                    td= line.name
+                                                    td= line.cost
+                                                    if line.unit
+                                                        td шт.
+                                                    else
+                                                        td
+                                                            |за м
+                                                            sup 2
                     hr
                     .sidepanel.widget_text
                         h3
-                            a(href='/Prays_rabochiy.xlsx')
+                            a(href='#{priceLink}')
                                 b Скачать
                             |&nbsp;прайс-лист на услуги в EXCEL таблице

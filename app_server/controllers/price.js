@@ -1,4 +1,5 @@
 var request = require('request');
+var xlsxtojson = require('xlsx-to-json-lc');
 var apiOptions = {
     server: "http://localhost:3000"
 }
@@ -37,3 +38,49 @@ module.exports.index = function (req, res) {
         renderPricepage(req, res, body);
     })
 };
+
+var sendJSONResponse = function (res, status, content) {
+    res.status(status);
+    res.json(content);
+}
+
+module.exports.upload = function (req, res) {
+    if (!req.files) {
+        sendJSONResponse(res, 404, {
+            "message": "No files were uploaded"
+        });
+        return;
+    }
+    var sampleFile;
+    sampleFile = req.files.file;
+    sampleFile.mv('./uploads/' + sampleFile.name, function (err) {
+        if (err) {
+            sendJSONResponse(res,500,err);
+            return;
+        } else {
+            sendJSONResponse(res,200);
+        }
+        try {
+            xlsxtojson({
+                input: './uploads/' + sampleFile.name,
+                output: null, //since we don’t need output.json
+                lowerCaseHeaders: true
+            }, function (err, result) {
+                if (err) {
+                    return res.json({error_code: 1, err_desc: err, data: null});
+                }
+                res.json({error_code: 0, err_desc: null, data: result});
+                var fs = require('fs');
+                try {
+                    fs.unlinkSync('./uploads/' + sampleFile.name);
+                } catch (e) {
+                    //error deleting the file
+                }
+
+            });
+        } catch (e) {
+            console.log('error');
+            res.json({error_code: 1, err_desc: 'Corrupted excel file'});
+        }
+    });
+}

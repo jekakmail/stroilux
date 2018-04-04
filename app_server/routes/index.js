@@ -6,7 +6,9 @@ var ctrlOther = require('../controllers/other');
 
 /* GET home page. */
 router.get('/', ctrlMain.index);
-router.get('/price', ctrlPrice.index);
+router.route('/price')
+    .get(ctrlPrice.index)
+    .post(ctrlPrice.upload);
 router.get('/contacts', ctrlOther.contacts);
 router.get('/about', ctrlOther.about);
 

@@ -10,6 +10,9 @@ block content
         .container
             .row
                 .blog_block.col-lg-9.col-md-9.padbot50
+                    form(ref='uploadForm', id='uploadForm', action='http://localhost:3000/price', method='post', enctype='multipart/form-data')
+                        input(type='file', name='file')
+                        input(type='submit', value='Upload!')
                     .single_blog_post.clearfix(data-animated='fadeInUp')
                         .single_blog_post_descr
                         .single_blog_post_content
